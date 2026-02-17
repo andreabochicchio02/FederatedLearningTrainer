@@ -1,9 +1,26 @@
-# ds_proj
+# Federated Learning Trainer
+This project implements a **Horizontal Federated Learning (HFL)** platform for distributed training of TensorFlow models without centralizing data. The system is designed to be privacy-preserving, fault-tolerant, and scalable, and allows real-time monitoring and control of the training process.
 
-### Documentation Links
-https://github.com/ivanbrillo/FederatedLearningErlang/blob/main/Federated_Learning_DOC.pdf
+A representative use case is a network of hospitals collaboratively training a machine learning model on sensitive medical data. Each hospital trains locally and only shares model updates, ensuring data privacy while achieving performance comparable to centralized training.
 
-# Stand Alone Use (without Java server)
+The system was evaluated using a federated setup on the MNIST dataset. The federated model achieved accuracy comparable to centralized training, confirming the effectiveness of the approach.
+
+## Technologies Used
+- **Erlang** – Distributed coordination and fault tolerance _(Project Requirement)_
+- **Python** – TensorFlow training and model aggregation
+- **TensorFlow / Keras** – Neural network implementation
+- **Java (Spring Boot)** – Backend and system orchestration
+- **WebSockets (SockJS)** – Real-time communication
+- **Maven & Rebar3** – Build automation
+
+## Documentation Links
+[PROJECT DOCUMENTATION](https://github.com/andreabochicchio02/FederatedLearning/blob/main/Federated_Learning_DOC.pdf)
+
+## System Architecture
+<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/bc794d00-9215-4061-854b-7c997a3ff6db" />
+
+
+## Stand Alone Use (without Java server)
 ### Hide Warnings (Linux)
 ```export TF_CPP_MIN_LOG_LEVEL=3```
 
